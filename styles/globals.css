@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-merriweather: 'Merriweather', serif;
+  --font-dancing-script: 'Dancing Script', cursive;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  @apply bg-black text-white;
+}

@@ -1,0 +1,62 @@
+
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { Play } from "lucide-react";
+import { Button } from "./ui/button";
+
+interface HeroSectionProps {
+  onOpenModal: () => void;
+}
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 80 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};
+
+export function HeroSection({ onOpenModal }: HeroSectionProps) {
+  return (
+    <section
+      id="home"
+      className="relative flex flex-col items-center justify-center text-center h-screen px-4"
+    >
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-10 z-0"
+      >
+        <source src="/background.mp4" type="video/mp4" />
+      </video>
+      <div className="relative z-10">
+        <Image
+          src="/logo.png"
+          alt="Metaphor ReFantazio Logo"
+          width={900}
+          height={200}
+          className="mx-auto"
+        />
+        <motion.p
+          className="mt-6 text-lg text-gray-300 max-w-xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+          variants={fadeInUp}
+        >
+          A new fantasy RPG from the creators of Persona. Dive into a mythical realm where destiny is forged in battle.
+        </motion.p>
+        <Button
+          onClick={onOpenModal}
+          className="mt-8 px-6 py-3 text-4xl truncate w-72 bg-red-600 hover:bg-red-700 font-dancing flex items-center justify-center gap-4"
+        >
+          <Play className="w-8 h-8" />
+          Watch Trailer
+        </Button>
+      </div>
+    </section>
+  );
+}
