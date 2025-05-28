@@ -2,8 +2,13 @@
 
 Este é um projeto de portfólio inspirado no universo de **Metaphor: ReFantazio**, criado com **Next.js**, **TailwindCSS**, **Framer Motion** e **Internacionalização (i18n)** usando o `next-i18next`.
 
+## Hero Section
 ![Hero Section](public/screenshots/hero.png)
+
+## About Section
 ![About Section](public/screenshots/about.png)
+
+## Characters Section
 ![Characters Section](public/screenshots/characters.png)
 
 ---
