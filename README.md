@@ -1,4 +1,4 @@
-# Metaphor: ReFantazio - Fan Project
+# ⚔️ Metaphor: ReFantazio - Fan Project
 
 Este é um projeto de portfólio inspirado no universo de **Metaphor: ReFantazio**, criado com **Next.js**, **TailwindCSS**, **Framer Motion** e **Internacionalização (i18n)** usando o `next-i18next`.
 
