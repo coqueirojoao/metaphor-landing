@@ -3,10 +3,10 @@
 import { useState } from "react";
 import { VideoModal } from "../components/ui/videoModal";
 import { Header } from "../components/ui/header";
-import { HeroSection } from "../components/heroSection";
-import { AboutSection } from "../components/AboutSection";
 import { CharactersSection } from "../components/CharactersSection";
 import Footer from "../components/ui/footer";
+import { HeroSection } from "../components/HeroSection";
+import { AboutSection } from "../components/AboutSection";
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);

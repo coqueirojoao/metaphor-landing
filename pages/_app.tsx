@@ -1,4 +1,3 @@
-// pages/_app.tsx
 import "../styles/globals.css";
 import { Inter, Merriweather, Dancing_Script } from "next/font/google";
 import type { AppProps } from "next/app";

@@ -1,3 +1,5 @@
+'use client';
+
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
@@ -12,7 +14,7 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
   return (
     <section
       id="home"
-      className="relative flex flex-col items-center justify-center text-center h-screen px-4 overflow-hidden"
+      className="relative flex flex-col items-center justify-center text-center min-h-screen px-4 sm:px-6 md:px-8 py-20 overflow-hidden"
     >
       <video
         autoPlay
@@ -29,12 +31,12 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
         <Image
           src="/logo.png"
           alt="Metaphor ReFantazio Logo"
-          width={900}
+          width={500}
           height={200}
           className="mx-auto"
         />
         <motion.p
-          className="mt-6 text-lg text-gray-300 max-w-xl"
+          className="mt-6 text-base sm:text-lg text-gray-300 max-w-xl"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.2 }}
@@ -44,10 +46,10 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
         </motion.p>
         <Button
           onClick={onOpenModal}
-          className="mt-8 px-6 py-3 text-4xl truncate w-72 bg-red-600 hover:bg-red-700 font-dancing flex items-center justify-center gap-4"
+          className="mt-8 w-80 sm:w-96 md:w-[28rem] px-6 py-4 bg-red-600 hover:bg-red-700 font-dancing flex items-center justify-center gap-4 rounded-xl"
         >
-          <Play className="w-8 h-8" />
-          Watch Trailer
+          <Play className="w-7 h-7 sm:w-8 sm:h-8 !text-2xl sm:!text-3xl md:!text-4xl" />
+          <span className="!text-2xl sm:!text-3xl md:!text-4xl">Watch Trailer</span>
         </Button>
       </div>
     </section>

@@ -3,12 +3,11 @@ import { motion } from "framer-motion";
 import { characterData } from "../data/characters";
 import { fadeInUp } from "../utils/animation";
 
-
 export function CharactersSection() {
   return (
     <section
       id="characters"
-      className="relative px-2 py-20 flex flex-col items-center text-center overflow-hidden"
+      className="relative py-20 flex flex-col items-center text-center overflow-hidden"
     >
       <div className="absolute inset-0 z-0">
         <Image
@@ -22,7 +21,7 @@ export function CharactersSection() {
       </div>
       <div className="relative z-20">
         <motion.h2
-          className="text-5xl font-extrabold text-orange-400 tracking-widest mb-4 uppercase"
+          className="text-5xl font-extrabold text-orange-400 tracking-wider md:tracking-widest mb-4 uppercase"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.2 }}
@@ -31,14 +30,14 @@ export function CharactersSection() {
           Characters
         </motion.h2>
         <motion.div
-          className="w-20 h-1 bg-orange-500 mx-auto my-4"
+          className="w-20 h-1 bg-orange-500 mx-auto my-4 px-4 sm:px-0"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.2 }}
           variants={fadeInUp}
         />
         <motion.p
-          className="text-gray-200 max-w-2xl mx-auto"
+          className="text-gray-200 max-w-2xl mx-auto text-lg px-4 sm:px-0 "
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.2 }}
@@ -48,7 +47,7 @@ export function CharactersSection() {
         </motion.p>
       </div>
 
-      <div className="relative z-20 flex flex-col gap-8 md:gap-20 max-w-6xl w-full mx-auto px-2">
+      <div className="relative z-20 flex flex-col gap-8 md:gap-20 max-w-6xl w-full mx-auto px-4">
         {Object.entries(characterData).map(([name, data], index) => (
           <motion.div
             key={name}
@@ -56,7 +55,9 @@ export function CharactersSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: false, amount: 0.2 }}
-            className={`flex flex-col md:flex-row ${index % 2 !== 0 ? "md:flex-row-reverse" : ""} items-center gap-6 md:gap-10`}
+            className={`flex flex-col md:flex-row ${
+              index % 2 !== 0 ? "md:flex-row-reverse" : ""
+            } items-center gap-6 md:gap-10`}
           >
             <div className="w-full md:w-1/2 flex justify-center">
               <Image
@@ -68,7 +69,9 @@ export function CharactersSection() {
               />
             </div>
             <div className="w-full md:w-1/2 text-left">
-              <h3 className="text-3xl font-bold text-orange-200 uppercase mt-2">{name}</h3>
+              <h3 className="text-3xl font-bold text-orange-200 uppercase mt-2">
+                {name}
+              </h3>
               <p className="italic text-gray-400 text-md mb-4">{data.title}</p>
               <p className="text-gray-100 text-lg leading-relaxed">{data.description}</p>
             </div>

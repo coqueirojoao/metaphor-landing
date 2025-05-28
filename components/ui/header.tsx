@@ -1,5 +1,3 @@
-"use client";
-
 const sections = ["home", "about", "characters"];
 
 export function Header() {
