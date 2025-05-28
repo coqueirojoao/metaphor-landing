@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { characterData } from "../data/characters";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 80 },
@@ -7,27 +8,6 @@ const fadeInUp = {
     opacity: 1,
     y: 0,
     transition: { duration: 0.8, ease: "easeOut" },
-  },
-};
-
-const characterData = {
-  Will: {
-    src: "/hero.webp",
-    description:
-      "The protagonist of Metaphor: ReFantazio, canonically known as Will primarily, is a young man of a fantasy background. He is of the elda tribe, a race defined by no distinguished characteristics and an impossibly rare tribe.",
-    title: "Wiru",
-  },
-  "Louis Guiabern": {
-    src: "/louis.webp",
-    description:
-      "Louis Guiabern is the main antagonist in Metaphor: ReFantazio. He is a charismatic prodigy and an army officer, supposedly of the clemar tribe.",
-    title: "Rui Guiaberun",
-  },
-  Hulkenberg: {
-    src: "/hulkenberg.webp",
-    description:
-      "Eiselin Burchelli Meijal Hulkenberg, known simply as Hulkenberg, is a major playable character in Metaphor: ReFantazio. She is a knight of the populous roussainte tribe and a former member of the royal family's Kingsguard. After failing to protect the prince during an assassination attempt, she wandered the kingdom in shame. She returns to combat upon hearing news of King Hythlodaeus V's death.",
-    title: "Aizerin Barucherri Maiaru Hyurukenberugu",
   },
 };
 
