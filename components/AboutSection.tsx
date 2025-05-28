@@ -14,18 +14,19 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="relative h-screen flex flex-col justify-center items-center text-center px-6"
+      className="relative h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden"
     >
       <div className="absolute inset-0 z-0">
         <Image
           src="/background-about-section.jpg"
           alt="Background"
-          layout="fill"
-          objectFit="cover"
-          className="opacity-20"
+          fill
+          className="object-cover opacity-20"
         />
+        <div className="absolute top-0 left-0 w-full h-72 bg-gradient-to-b from-black/80 to-transparent z-10" />
+        <div className="absolute bottom-0 left-0 w-full h-72 bg-gradient-to-t from-black/80 to-transparent z-10" />
       </div>
-      <div className="relative z-10">
+      <div className="relative z-20">
         <motion.h2
           className="text-5xl font-extrabold text-orange-400 tracking-widest mb-4 uppercase"
           initial="hidden"

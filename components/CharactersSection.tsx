@@ -15,18 +15,19 @@ export function CharactersSection() {
   return (
     <section
       id="characters"
-      className="relative px-2 py-20 flex flex-col items-center text-center"
+      className="relative px-2 py-20 flex flex-col items-center text-center overflow-hidden"
     >
       <div className="absolute inset-0 z-0">
         <Image
           src="/background-characters.jpg"
           alt="Characters Background"
-          layout="fill"
-          objectFit="cover"
-          className="opacity-20"
+          fill
+          className="object-cover opacity-20"
         />
+        <div className="absolute top-0 left-0 w-full h-72 bg-gradient-to-b from-black/80 to-transparent z-10" />
+        <div className="absolute bottom-0 left-0 w-full h-72 bg-gradient-to-t from-black/80 to-transparent z-10" />
       </div>
-      <div className="relative z-10">
+      <div className="relative z-20">
         <motion.h2
           className="text-5xl font-extrabold text-orange-400 tracking-widest mb-4 uppercase"
           initial="hidden"
@@ -54,7 +55,7 @@ export function CharactersSection() {
         </motion.p>
       </div>
 
-      <div className="relative z-10 flex flex-col gap-8 md:gap-20 max-w-6xl w-full mx-auto px-2">
+      <div className="relative z-20 flex flex-col gap-8 md:gap-20 max-w-6xl w-full mx-auto px-2">
         {Object.entries(characterData).map(([name, data], index) => (
           <motion.div
             key={name}
@@ -68,8 +69,8 @@ export function CharactersSection() {
               <Image
                 src={data.src}
                 alt={name}
-                width={320}
-                height={320}
+                width={280}
+                height={280}
                 className="rounded-xl shadow-xl mx-auto w-full max-w-xs md:max-w-md lg:max-w-lg"
               />
             </div>

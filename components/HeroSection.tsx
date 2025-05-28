@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
@@ -21,7 +20,7 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
   return (
     <section
       id="home"
-      className="relative flex flex-col items-center justify-center text-center h-screen px-4"
+      className="relative flex flex-col items-center justify-center text-center h-screen px-4 overflow-hidden"
     >
       <video
         autoPlay
@@ -32,7 +31,9 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
       >
         <source src="/background.mp4" type="video/mp4" />
       </video>
-      <div className="relative z-10">
+      <div className="absolute top-0 left-0 w-full h-72 bg-gradient-to-b from-black/80 to-transparent z-10" />
+      <div className="absolute bottom-0 left-0 w-full h-72 bg-gradient-to-t from-black/80 to-transparent z-10" />
+      <div className="relative z-20">
         <Image
           src="/logo.png"
           alt="Metaphor ReFantazio Logo"
