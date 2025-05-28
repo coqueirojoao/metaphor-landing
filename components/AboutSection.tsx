@@ -1,14 +1,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 80 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.8, ease: "easeOut" },
-  },
-};
+import { fadeInUp } from "../utils/animation";
 
 export function AboutSection() {
   return (

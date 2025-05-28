@@ -1,15 +1,8 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { characterData } from "../data/characters";
+import { fadeInUp } from "../utils/animation";
 
-const fadeInUp = {
-  hidden: { opacity: 0, y: 80 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.8, ease: "easeOut" },
-  },
-};
 
 export function CharactersSection() {
   return (
