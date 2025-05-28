@@ -27,17 +27,26 @@ Este é um projeto de portfólio inspirado no universo de **Metaphor: ReFantazio
 
 ```
 .
-├── components/             # Componentes reutilizáveis
-├── data/                   # Dados dos personagens
-├── locales/                # Traduções i18n (pt e en)
-├── pages/                  # Páginas do Next.js
+├── components/             
+│   ├── AboutSection.tsx         # Seção sobre o jogo
+│   ├── CharactersSection.tsx    # Seção com os personagens
+│   ├── HeroSection.tsx          # Seção inicial com chamada para o trailer
+│   └── ui/                      # Componentes visuais reutilizáveis (Header, Footer, etc.)
+├── data/                        # Dados dos personagens
+├── pages/                       # Páginas do Next.js
 ├── public/
-│   ├── flags/              # Bandeiras pt/en
-│   └── screenshots/        # Screenshots usadas no README
+│   ├── flags/                   # Bandeiras pt/en
+│   ├── platforms/               # Logos das plataformas (PS5, Xbox, Steam etc.)
+│   ├── screenshots/             # Screenshots usadas no README
+│   └── locales/                 # Arquivos de tradução i18n (pt e en)
+│       ├── en/
+│       │   └── common.json
+│       └── pt/
+│           └── common.json
 ├── styles/
-│   └── globals.css         # Estilos globais
-├── types/                  # Tipagens TypeScript
-└── utils/                  # Utilitários (ex: animações)
+│   └── globals.css              # Estilos globais
+├── types/                       # Tipagens TypeScript
+└── utils/                       # Utilitários (ex: animações)
 ```
 
 ---
@@ -46,7 +55,7 @@ Este é um projeto de portfólio inspirado no universo de **Metaphor: ReFantazio
 
 Este projeto suporta **português (pt)** e **inglês (en)**. A mudança de idioma pode ser feita clicando nas bandeiras localizadas no header (🇧🇷 🇺🇸).
 
-- Os arquivos de tradução estão localizados em: `/locales/pt/common.json` e `/locales/en/common.json`.
+- Os arquivos de tradução estão localizados em: `public/locales/pt/common.json` e `public/locales/en/common.json`.
 
 ---
 
