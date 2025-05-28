@@ -1,7 +1,7 @@
 'use client';
 
+import React, { useEffect, forwardRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useEffect } from 'react';
 
 type VideoModalProps = {
   isOpen: boolean;
@@ -9,6 +9,18 @@ type VideoModalProps = {
   videoId: string;
   title?: string;
 };
+
+const MotionBackdrop = motion(
+  forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>((props, ref) => (
+    <div ref={ref} {...props} />
+  ))
+);
+
+const MotionContainer = motion(
+  forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>((props, ref) => (
+    <div ref={ref} {...props} />
+  ))
+);
 
 export function VideoModal({ isOpen, onClose, videoId, title }: VideoModalProps) {
   useEffect(() => {
@@ -22,14 +34,14 @@ export function VideoModal({ isOpen, onClose, videoId, title }: VideoModalProps)
   return (
     <AnimatePresence>
       {isOpen && (
-        <motion.div
+        <MotionBackdrop
           className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center backdrop-blur-sm px-2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
         >
-          <motion.div
+          <MotionContainer
             className="bg-black/90 p-3 sm:p-4 md:p-6 rounded-lg w-full max-w-md sm:max-w-lg md:max-w-3xl relative shadow-xl"
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -61,8 +73,8 @@ export function VideoModal({ isOpen, onClose, videoId, title }: VideoModalProps)
                 allowFullScreen
               />
             </div>
-          </motion.div>
-        </motion.div>
+          </MotionContainer>
+        </MotionBackdrop>
       )}
     </AnimatePresence>
   );
