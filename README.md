@@ -1,31 +1,10 @@
-# Metaphor: ReFantazio – Fan Portfolio
+# Metaphor: ReFantazio - Fan Project
 
-Uma landing page elegante e responsiva dedicada ao jogo **Metaphor: ReFantazio**, criada como projeto de portfólio com foco em internacionalização, animações e design visual envolvente.
+Este é um projeto de portfólio inspirado no universo de **Metaphor: ReFantazio**, criado com **Next.js**, **TailwindCSS**, **Framer Motion** e **Internacionalização (i18n)** usando o `next-i18next`.
 
-## 🔥 Features
-
-- 🌐 Suporte a múltiplos idiomas (pt-BR 🇧🇷 e en 🇺🇸)
-- 🧩 Animações suaves com Framer Motion
-- 🎨 Fontes personalizadas com Google Fonts
-- 🧑‍🤝‍🧑 Sessão de personagens dinâmica
-- 📱 Totalmente responsivo com menu hambúrguer mobile
-- 📦 Estrutura com Next.js + Tailwind CSS + i18next
-
----
-
-## 📸 Screenshots
-
-### 🧝 Hero Section
-![Hero Section](./hero_screenshot.png)
-
-### 🛡️ About Section
-![About Section](./about_screenshot.png)
-
-### 👤 Characters Section
-![Characters Section](./characters_screenshot.png)
-
-### 🖤 Footer
-![Footer](./footer_screenshot.png)
+![Hero Section](public/screenshots/hero.png)
+![About Section](public/screenshots/about.png)
+![Characters Section](public/screenshots/characters.png)
 
 ---
 
@@ -34,24 +13,74 @@ Uma landing page elegante e responsiva dedicada ao jogo **Metaphor: ReFantazio**
 - [Next.js](https://nextjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/)
-- [react-i18next](https://react.i18next.com/)
+- [next-i18next](https://github.com/i18next/next-i18next)
 - [TypeScript](https://www.typescriptlang.org/)
 
 ---
 
-## 🛠️ Como Rodar Localmente
+## 📁 Estrutura de Pastas
+
+```
+.
+├── components/             # Componentes reutilizáveis
+├── data/                   # Dados dos personagens
+├── locales/                # Traduções i18n (pt e en)
+├── pages/                  # Páginas do Next.js
+├── public/
+│   ├── flags/              # Bandeiras pt/en
+│   └── screenshots/        # Screenshots usadas no README
+├── styles/
+│   └── globals.css         # Estilos globais
+├── types/                  # Tipagens TypeScript
+└── utils/                  # Utilitários (ex: animações)
+```
+
+---
+
+## 🌐 Internacionalização (i18n)
+
+Este projeto suporta **português (pt)** e **inglês (en)**. A mudança de idioma pode ser feita clicando nas bandeiras localizadas no header (🇧🇷 🇺🇸).
+
+- Os arquivos de tradução estão localizados em: `/locales/pt/common.json` e `/locales/en/common.json`.
+
+---
+
+## 📦 Instalação
 
 ```bash
-# 1. Clone o repositório
 git clone https://github.com/coqueirojoao/metaphor-landing.git
 cd metaphor-landing
-
-# 2. Instale as dependências
 npm install
-# ou
-yarn install
+```
 
-# 3. Rode o servidor de desenvolvimento
+---
+
+## 🧪 Executando o projeto localmente
+
+```bash
 npm run dev
-# ou
-yarn dev
+```
+
+Acesse: `http://localhost:3000`
+
+---
+
+## 🧳 Build para produção
+
+```bash
+npm run build
+npm start
+```
+
+---
+
+## 🤝 Contato
+
+Este projeto foi desenvolvido por [João Pedro Coqueiro de Azevedo](https://www.linkedin.com/in/coqueirojoao/). Sinta-se livre para contribuir, reportar bugs ou entrar em contato!
+
+---
+
+## 🧾 Créditos
+
+- Imagens, personagens e referências são propriedade da Atlus e Studio Zero.
+- Este projeto é **não-comercial** e feito exclusivamente para fins educacionais e de portfólio.
