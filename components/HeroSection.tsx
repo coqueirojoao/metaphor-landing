@@ -21,7 +21,7 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
 
   return (
     <section id="home" className="relative flex flex-col items-center justify-center text-center h-screen px-4 overflow-hidden">
-      <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover opacity-10 z-0">
+      <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover opacity-50 z-0">
         <source src="/background.mp4" type="video/mp4" />
       </video>
       <div className="absolute top-0 left-0 w-full h-72 bg-gradient-to-b from-black/80 to-transparent z-10" />
