@@ -1,0 +1,40 @@
+{
+  "header": {
+  "home": "Home",
+  "about": "About",
+  "characters": "Characters"
+},
+"footer": {
+  "credits": "© 2025 Metaphor: ReFantazio | A fan-made portfolio project"
+},
+  "hero": {
+    "tagline": "A new fantasy RPG from the creators of Persona. Dive into a mythical realm where destiny is forged in battle.",
+    "trailer": "Watch Trailer"
+  },
+  "about": {
+    "title": "About",
+    "text1": "Metaphor: ReFantazio is an extraordinary fantasy RPG from Atlus’s Studio Zero. Helmed by Persona series director Katsura Hashino, the game transports players to the mystical kingdom of Euchronia, where they embark on a magical political race to claim the throne.",
+    "text2": "Inspired by the spiritual depth of Persona but set in an entirely new world, ReFantazio explores themes of anxiety, belief, and transformation. The story challenges players to confront their inner fears as they shape their identity in a society filled with secrets and strife.",
+    "text3": "With visionary art direction by Shigenori Soejima and a deeply immersive score by Shoji Meguro, the game melds real-time and turn-based combat into a unique system that rewards both intuition and strategy."
+  },
+  "characters": {
+    "title": "Characters",
+    "subtitle": "Meet the heroes and adversaries that shape your fate in this enthralling tale.",
+    "Will": {
+      "title": "Wiru",
+      "description": "The protagonist of Metaphor: ReFantazio, canonically known as Will primarily, is a young man of a fantasy background. He is of the elda tribe, a race defined by no distinguished characteristics and an impossibly rare tribe."
+    },
+    "Louis Guiabern": {
+      "title": "Rui Guiaberun",
+      "description": "Louis Guiabern is the main antagonist in Metaphor: ReFantazio. He is a charismatic prodigy and an army officer, supposedly of the clemar tribe."
+    },
+    "Hulkenberg": {
+      "title": "Aizerin Barucherri Maiaru Hyurukenberugu",
+      "description": "Eiselin Burchelli Meijal Hulkenberg, known simply as Hulkenberg, is a major playable character in Metaphor: ReFantazio. She is a knight of the populous roussainte tribe and a former member of the royal family's Kingsguard. After failing to protect the prince during an assassination attempt, she wandered the kingdom in shame. She returns to combat upon hearing news of King Hythlodaeus V's death."
+    },
+    "Leon Strohl": {
+      "title": "Reon Sutorouru Da Harieitasu",
+      "description": "Leon Strohl da Haliaetus, known simply as Strohl, is a major playable character in Metaphor: ReFantazio. He is of the populous clemar tribe and the son of the fallen noble family of Halia."
+    }
+  }
+}

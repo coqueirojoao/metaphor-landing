@@ -6,8 +6,11 @@ import { fadeInUp } from "../utils/animation";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { useEffect } from "react";
+import { useTranslation } from "next-i18next";
 
 export function AboutSection() {
+  const { t } = useTranslation("common");
+
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     renderMode: "performance",
@@ -53,7 +56,7 @@ export function AboutSection() {
           viewport={{ once: false, amount: 0.2 }}
           variants={fadeInUp}
         >
-          About
+          {t("about.title")}
         </motion.h2>
         <motion.div
           className="w-20 h-1 bg-orange-500 mx-auto mb-8"
@@ -62,48 +65,31 @@ export function AboutSection() {
           viewport={{ once: false, amount: 0.2 }}
           variants={fadeInUp}
         />
-
         <div className="text-gray-100 space-y-6 text-lg px-2">
-          <motion.p
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
-            variants={fadeInUp}
-          >
-            <strong>Metaphor: ReFantazio</strong> is an extraordinary fantasy RPG from Atlus’s Studio Zero. Helmed by Persona series director Katsura Hashino, the game transports players to the mystical kingdom of Euchronia, where they embark on a magical political race to claim the throne.
+          <motion.p initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.2 }} variants={fadeInUp}>
+            {t("about.paragraph1")}
           </motion.p>
-          <motion.p
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
-            variants={fadeInUp}
-          >
-            Inspired by the spiritual depth of Persona but set in an entirely new world, ReFantazio explores themes of anxiety, belief, and transformation. The story challenges players to confront their inner fears as they shape their identity in a society filled with secrets and strife.
+          <motion.p initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.2 }} variants={fadeInUp}>
+            {t("about.paragraph2")}
           </motion.p>
-          <motion.p
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
-            variants={fadeInUp}
-          >
-            With visionary art direction by Shigenori Soejima and a deeply immersive score by Shoji Meguro, the game melds real-time and turn-based combat into a unique system that rewards both intuition and strategy.
+          <motion.p initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.2 }} variants={fadeInUp}>
+            {t("about.paragraph3")}
           </motion.p>
         </div>
 
-<div ref={sliderRef} className="keen-slider mt-12">
-  {["ps5.png", "ps4.png", "xbox-series.png", "steam.png"].map((logo, i) => (
-    <div key={i} className="keen-slider__slide flex justify-center items-center">
-      <Image
-        src={`/platforms/${logo}`}
-        alt={logo}
-        width={120}
-        height={120}
-        className={`object-contain ${logo.includes("steam") ? "w-32" : "w-40"}`}
-      />
-    </div>
-  ))}
-</div>
-
+        <div ref={sliderRef} className="keen-slider mt-12">
+          {["ps5.png", "ps4.png", "xbox-series.png", "steam.png"].map((logo, i) => (
+            <div key={i} className="keen-slider__slide flex justify-center items-center">
+              <Image
+                src={`/platforms/${logo}`}
+                alt={logo}
+                width={logo === "steam.png" ? 128 : 160}
+                height={logo === "steam.png" ? 128 : 160}
+                className="object-contain w-32 sm:w-40"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

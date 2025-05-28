@@ -1,20 +1,24 @@
 'use client';
 
+
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
 import { Button } from "./ui/button";
 import { fadeInUp } from "../utils/animation";
+import { useTranslation } from "next-i18next";
 
 interface HeroSectionProps {
   onOpenModal: () => void;
 }
 
 export function HeroSection({ onOpenModal }: HeroSectionProps) {
+  const { t } = useTranslation("common");
+
   return (
     <section
       id="home"
-      className="relative flex flex-col items-center justify-center text-center min-h-screen px-4 sm:px-6 md:px-8 py-20 overflow-hidden"
+      className="relative flex flex-col items-center justify-center text-center h-screen px-4 overflow-hidden"
     >
       <video
         autoPlay
@@ -36,20 +40,20 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
           className="mx-auto"
         />
         <motion.p
-          className="mt-6 text-base sm:text-lg text-gray-300 max-w-xl"
+          className="mt-6 text-lg text-gray-300 max-w-xl"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.2 }}
           variants={fadeInUp}
         >
-          A new fantasy RPG from the creators of Persona. Dive into a mythical realm where destiny is forged in battle.
+          {t("hero.description")}
         </motion.p>
         <Button
           onClick={onOpenModal}
           className="mt-8 w-80 sm:w-96 md:w-[28rem] px-6 py-4 bg-red-600 hover:bg-red-700 font-dancing flex items-center justify-center gap-4 rounded-xl"
         >
           <Play className="w-7 h-7 sm:w-8 sm:h-8 !text-2xl sm:!text-3xl md:!text-4xl" />
-          <span className="!text-2xl sm:!text-3xl md:!text-4xl">Watch Trailer</span>
+          <span className="!text-2xl sm:!text-3xl md:!text-4xl">{t("hero.button")}</span>
         </Button>
       </div>
     </section>
