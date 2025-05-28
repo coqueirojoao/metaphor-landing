@@ -23,14 +23,14 @@ export function VideoModal({ isOpen, onClose, videoId, title }: VideoModalProps)
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center backdrop-blur-sm"
+          className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center backdrop-blur-sm px-2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
         >
           <motion.div
-            className="bg-black/80 p-4 md:p-6 rounded-lg max-w-3xl w-full relative shadow-lg"
+            className="bg-black/90 p-3 sm:p-4 md:p-6 rounded-lg w-full max-w-md sm:max-w-lg md:max-w-3xl relative shadow-xl"
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
@@ -39,14 +39,14 @@ export function VideoModal({ isOpen, onClose, videoId, title }: VideoModalProps)
           >
             <button
               onClick={onClose}
-              className="absolute top-2 right-3 text-white text-2xl hover:text-red-800 transition"
+              className="absolute top-2 right-3 text-white text-2xl sm:text-3xl hover:text-red-800 transition"
               aria-label="Close modal"
             >
               ×
             </button>
 
             {title && (
-              <h2 className="text-white text-center mb-4 text-lg md:text-xl font-semibold">
+              <h2 className="text-white text-center mb-4 text-base sm:text-lg md:text-xl font-semibold">
                 {title}
               </h2>
             )}
@@ -59,7 +59,7 @@ export function VideoModal({ isOpen, onClose, videoId, title }: VideoModalProps)
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-              ></iframe>
+              />
             </div>
           </motion.div>
         </motion.div>
